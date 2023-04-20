@@ -150,7 +150,7 @@ VALUES (
   1
 );
 
-SELECT * FROM movies
+SELECT * FROM movies;
 
 -- Prints a header for the movies output
 .print "Movies"
