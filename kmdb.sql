@@ -199,4 +199,3 @@ INNER JOIN studios on movies.studio_id =studios.id;
 SELECT movies.title,actors.name, starrings.character FROM starrings
 INNER JOIN movies on starrings.movie_id = movies.id
 INNER JOIN actors on starrings.actor_id = actors.id;
-
