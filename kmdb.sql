@@ -147,13 +147,43 @@ INSERT INTO studios (id, name)
 VALUES
     (1, "Warner Bros");
 
+INSERT INTO actors (id,name)
+VALUES
+    (1, "Christian Bale"),
+    (2, "Michael Caine"),
+    (3,"Liam Neeson"),
+    (4, "Katie Holmes"),
+    (5,"Gary Oldman"),
+    (6,"Heath Ledger"),
+    (7, "Aaron Eckhart"),
+    (8, "Maggie Gyllenhaal"),
+    (9, "Tom Hardy"),
+    (10, "Joseph Gordon-Levitt"),
+    (11, "Anne Hathaway");
+
+
+-- Batman Begins          Christian Bale        Bruce Wayne
+-- Batman Begins          Michael Caine         Alfred
+-- Batman Begins          Liam Neeson           Ra's Al Ghul
+-- Batman Begins          Katie Holmes          Rachel Dawes
+-- Batman Begins          Gary Oldman           Commissioner Gordon
+-- The Dark Knight        Christian Bale        Bruce Wayne
+-- The Dark Knight        Heath Ledger          Joker
+-- The Dark Knight        Aaron Eckhart         Harvey Dent
+-- The Dark Knight        Michael Caine         Alfred
+-- The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
+-- The Dark Knight Rises  Christian Bale        Bruce Wayne
+-- The Dark Knight Rises  Gary Oldman           Commissioner Gordon
+-- The Dark Knight Rises  Tom Hardy             Bane
+-- The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
+-- The Dark Knight Rises  Anne Hathaway         Selina Kyle
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
 .print ""
 
 -- The SQL statement for the movies output
-SELECT id,title,year,mpaa_rating FROM movies
+SELECT movies.id,movies.title,movies.year,movies.mpaa_rating,studios.name FROM movies
 INNER JOIN studios on movies.studio_id =studios.id;
 
 -- Prints a header for the cast output
