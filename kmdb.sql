@@ -137,20 +137,15 @@ CREATE TABLE starrings (
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
-INSERT INTO movies (
-  title,
-  year,
-  mpaa_rating,
-  studio_id
-)
-VALUES (
-  "Batman Begins", 
-  "2005",
-  "PG-13",
-  1
-);
+INSERT INTO movies (id, title, year, mpaa_rating, studio_id)
+VALUES
+    (1, "Batman Begins", 2005, "PG-13", 1),
+    (2, "The Dark Knight", 2008, "PG-13", 1),
+    (3, "The Dark Knight Rises", 2012, "PG-13", 1);
 
-SELECT * FROM movies;
+INSERT INTO studios (id, name)
+VALUES
+    (1, "Warner Bros");
 
 -- Prints a header for the movies output
 .print "Movies"
@@ -158,7 +153,8 @@ SELECT * FROM movies;
 .print ""
 
 -- The SQL statement for the movies output
--- TODO!
+SELECT id,title,year,mpaa_rating FROM movies
+INNER JOIN studios on movies.studio_id =studios.id;
 
 -- Prints a header for the cast output
 .print ""
