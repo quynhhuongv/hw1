@@ -180,22 +180,6 @@ VALUES
     (14, 10, 3, "John Blake"),
     (15, 11, 3, "Selina Kyle");
 
--- Batman Begins          Christian Bale        Bruce Wayne
--- Batman Begins          Michael Caine         Alfred
--- Batman Begins          Liam Neeson           Ra's Al Ghul
--- Batman Begins          Katie Holmes          Rachel Dawes
--- Batman Begins          Gary Oldman           Commissioner Gordon
--- The Dark Knight        Christian Bale        Bruce Wayne
--- The Dark Knight        Heath Ledger          Joker
--- The Dark Knight        Aaron Eckhart         Harvey Dent
--- The Dark Knight        Michael Caine         Alfred
--- The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
--- The Dark Knight Rises  Christian Bale        Bruce Wayne
--- The Dark Knight Rises  Gary Oldman           Commissioner Gordon
--- The Dark Knight Rises  Tom Hardy             Bane
--- The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
--- The Dark Knight Rises  Anne Hathaway         Selina Kyle
--- Prints a header for the movies output
 .print "Movies"
 .print "======"
 .print ""
@@ -212,4 +196,7 @@ INNER JOIN studios on movies.studio_id =studios.id;
 
 
 -- The SQL statement for the cast output
--- TODO!
+SELECT movies.title,actors.name, starrings.character FROM starrings
+INNER JOIN movies on starrings.movie_id = movies.id
+INNER JOIN actors on starrings.actor_id = actors.id;
+
