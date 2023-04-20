@@ -162,6 +162,24 @@ VALUES
     (11, "Anne Hathaway");
 
 
+INSERT INTO starrings (id,actor_id,movie_id,character)
+VALUES
+    (1, 1, 1, "Bruce Wayne"),
+    (2, 2, 1, "Alfred"),
+    (3, 3, 1, "Ra's Al Ghul"),
+    (4, 4, 1, "Rachel Dawes"),
+    (5, 5, 1, "Commissioner Gordon"),
+    (6, 1, 2, "Bruce Wayne"),
+    (7, 6, 2, "Joker"),
+    (8, 7, 2, "Harvey Dent"),
+    (9, 2, 2, "Alfred"),
+    (10, 8, 2, "Rachel Dawes"),
+    (11, 1, 3, "Bruce Wayne"),
+    (12, 5, 3, "Commissioner Gordon"),
+    (13, 9, 3, "Bane"),
+    (14, 10, 3, "John Blake"),
+    (15, 11, 3, "Selina Kyle");
+
 -- Batman Begins          Christian Bale        Bruce Wayne
 -- Batman Begins          Michael Caine         Alfred
 -- Batman Begins          Liam Neeson           Ra's Al Ghul
